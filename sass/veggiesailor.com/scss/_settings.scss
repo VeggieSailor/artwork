@@ -88,7 +88,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-sans-serif: 'Arimo', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif:  'Arimo', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 // font-family: 'Arimo', sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -246,6 +246,7 @@ $global-rounded: 1000px;
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
+$header-font-weight: bold;
 // $header-font-style: normal;
 $header-font-color: $white;
 // $header-line-height: 1.4;
@@ -254,11 +255,11 @@ $header-font-color: $white;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(30);
+$h1-font-size: rem-calc(32);
 $h2-font-size: rem-calc(23);
-$h3-font-size: rem-calc(17);
-$h4-font-size: rem-calc(15);
-$h5-font-size: rem-calc(12);
+$h3-font-size: rem-calc(21);
+$h4-font-size: rem-calc(17);
+$h5-font-size: rem-calc(14);
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
@@ -447,7 +448,7 @@ $h6-font-size: 1rem;
 $crumb-bg: $vs-breacrumb-bg-color;
 
 // We use these to set the padding around the breadcrumbs.
-$crumb-padding: rem-calc(9 0 0);
+$crumb-padding: rem-calc(9 9 0 0);
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
@@ -1460,7 +1461,7 @@ $topbar-height: rem-calc(65);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
+$topbar-link-color-hover: $vs-green;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
@@ -1481,20 +1482,20 @@ $topbar-height: rem-calc(65);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
+$topbar-dropdown-link-color: $white;
+$topbar-dropdown-link-color-hover: $vs-green;
+$topbar-dropdown-link-bg: $vs-green;
 // $topbar-dropdown-link-bg-hover: $jet;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: $white;
+$topbar-dropdown-toggle-color: $black;
 // $topbar-dropdown-toggle-alpha: .4;
 
 // $topbar-dropdown-label-color: $monsoon;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
+$topbar-dropdown-label-bg: $black;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
@@ -1571,6 +1572,17 @@ $topbar-height: rem-calc(65);
 }
 
 
+@import "foundation/components/breadcrumbs";
+.vs-crumbs  {
+  @include crumb-container;
+    		margin-bottom:10px;
+    		font-weight: bold;
+
+  li {
+    @include crumbs;
+  }
+
+} 
 $vs-margin-size : 20px;
 
 .image-entry {
@@ -1578,7 +1590,22 @@ $vs-margin-size : 20px;
 	margin-bottom: $vs-margin-size;
 }
 .description {
-		margin-top: $vs-margin-size;
-
 	color: $vs-very-dark-grey;
+}
+
+.vs-margin-top {
+	margin-top: $vs-margin-size;
+
+}
+
+.green {
+	color: $vs-green;
+}
+
+.vs-bold {
+	font-weight: bold;
+}
+
+.black {
+	color: $black;
 }
