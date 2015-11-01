@@ -113,7 +113,7 @@ $white       : #FFFFFF;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
-// $black       : #000000;
+$black       : #000000;
 
 
 $jet         : $white;
@@ -773,11 +773,11 @@ $input-border-radius: $global-radius;
 // $include-html-inline-list-classes: $include-html-classes;
 
 // We use this to control the margins and padding of the inline list.
-// $inline-list-top-margin: 0;
+$inline-list-top-margin: 10px;
 // $inline-list-opposite-margin: 0;
 // $inline-list-bottom-margin: rem-calc(17);
-// $inline-list-default-float-margin: rem-calc(-22);
-// $inline-list-default-float-list-margin: rem-calc(22);
+$inline-list-default-float-margin: rem-calc(-12);
+$inline-list-default-float-list-margin: rem-calc(12);
 
 // $inline-list-padding: 0;
 
@@ -1528,20 +1528,23 @@ $topbar-height: rem-calc(65);
 // $include-legacy-visibility-classes: true;
 
 
-.has-form {
-  position: absolute;
-  top: 0;
-  left: 6rem; // adjust distance from left here
-  min-width: 24rem; // adjust width here
-  @media only screen and (max-width: 40em) {
-    min-width: 10rem;
-    top: 0.5rem;
-    .button {
-      height: 1.85rem;
-    }
-  }
-}
+// .has-form {
+//   position: absolute;
+//   top: 0;
+//   left: 6rem; // adjust distance from left here
+//   min-width: 14rem; // adjust width here
+//   @media only screen and (max-width: 40em) {
+//     min-width: 2rem;
+//     top: 0.5rem;
+//     .button {
+//       height: 1.85rem;
+//     }
+//   }
+// }
 
+.has-form {
+
+}
 
 .bg-vs-dark-grey {
 	background-color: $vs-breacrumb-bg-color;
@@ -1549,4 +1552,28 @@ $topbar-height: rem-calc(65);
 
 .bg-vs-block-dark-grey {
 	background-color: $vs-very-dark-grey;
+}
+
+.bg-vs-block-light-grey {
+	background-color: $vs-very-dark-grey;
+}
+
+@import "foundation/components/inline-lists";
+
+.rating-list-class {
+  @include inline-list;
+  $inline-list-default-float-list-margin: rem-calc(12);
+}
+
+
+$vs-margin-size : 20px;
+
+.image-entry {
+	margin-top: $vs-margin-size;
+	margin-bottom: $vs-margin-size;
+}
+.description {
+		margin-top: $vs-margin-size;
+
+	color: $vs-very-dark-grey;
 }
