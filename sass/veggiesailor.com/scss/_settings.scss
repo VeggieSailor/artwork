@@ -152,6 +152,8 @@ $secondary-color: $vs-very-dark-grey;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
+$info-color: $vs-green;
+
 // We use these to control various global styles
 // $body-bg: $white;
 $body-bg: $vs-light-grey;
@@ -275,7 +277,10 @@ $h6-font-size: 1rem;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: $font-weight-normal;
 // $subheader-top-margin: .2rem;
+
 // $subheader-bottom-margin: .5rem;
+
+
 
 // A general <small> styling
 // $small-font-size: 60%;
@@ -672,7 +677,7 @@ $button-radius: $global-radius;
 // 11. Forms
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-form-classes: $include-html-classes;
+$include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
 // $form-spacing: rem-calc(16);
@@ -1609,3 +1614,61 @@ $vs-margin-size : 20px;
 .black {
 	color: $black;
 }
+
+.bgwhite {
+    background-color: white;
+}
+@import   "foundation/components/grid";
+@import   "foundation/components/forms";
+input[type="search"].custom-input-class {
+    @include form-element() ;
+    background-color: white;
+          border: {
+    style: $input-border-style;
+    width: $input-border-width;
+    color: $black;
+              $input-placeholder-font-color: white;
+  }
+//    $input-bg-color: red;
+//    $border: solid 2px $black;
+}
+
+@media #{$medium-up} { 
+
+    #id_image_logo {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    };
+    #id_row_sail {
+        margin-top: 20px;
+    };  
+
+}
+
+@media #{$large-up} { 
+
+    #id_image_logo {
+        margin-top: 160px;
+        margin-bottom: 60px;
+    };
+    #id_row_sail {
+        margin-top: 60px;
+    };  
+
+}
+@media #{$small-only and $portrait} { 
+    #id_image_logo {
+        margin-bottom: 60px;
+    };
+    #id_row_sail {
+        margin-top: 60px;
+    };  
+    .wide {
+            @include grid-column($columns:12)  ;  
+        }
+}
+
+.home-ghost-button-class { @include button;
+}
+
+
