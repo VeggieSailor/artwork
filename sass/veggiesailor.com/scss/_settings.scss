@@ -15,7 +15,7 @@
 // 01. Accordion
 // 02. Alert Boxes
 // 03. Block Grid
-// 04. Breadcrumbs
+// 04. Breadcrumb
 // 05. Buttons
 // 06. Button Groups
 // 07. Clearing
@@ -56,7 +56,7 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import 'foundation/functions';
-
+@import "foundation/components/panels";
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
@@ -152,6 +152,20 @@ $secondary-color: $vs-very-dark-grey;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
+//# F44336    0 - Not Veg-Friendly
+//# 2764AE    1 - Vegetarian-Friendly
+//# 388E3C    2 - Vegan-Friendly
+//# F38F1B    3 - Vegetarian (But Not Vegan-Friendly)
+//# 60C4E3    4 - Vegetarian
+//# 88BD24    5 - Vegan
+
+$level0-color: #f44336;
+$level1-color: #2764ae;
+$level2-color: #388E3C;
+$level3-color: #F38F1B;
+$level4-color: #60C4E3;
+$level5-color: #88BD24;    
+    
 $info-color: $vs-green;
 
 // We use these to control various global styles
@@ -1563,6 +1577,7 @@ $topbar-dropdown-label-bg: $black;
 
 .bg-vs-block-dark-grey {
 	background-color: $vs-very-dark-grey;
+    color: white;
 }
 
 .bg-vs-block-light-grey {
@@ -1670,5 +1685,27 @@ input[type="search"].custom-input-class {
 
 .home-ghost-button-class { @include button;
 }
+.label.level0-color {
+    background-color: $level1-color !important;
+}
+.label.level1-color {
+    background-color: $level2-color !important;
+}
+.label.level2-color {
+    background-color: $level3-color !important;
+}
+.label.level3-color {
+    background-color: $level3-color !important;
+}
+.label.level4-color {
+    background-color: $level4-color !important;
+}
+.label.level5-color {
+    background-color: $level5-color !important;
+}
 
 
+.result-panel {
+  @include panel();
+    background-color: white;
+}
