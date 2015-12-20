@@ -57,6 +57,7 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import 'foundation/functions';
 @import "foundation/components/panels";
+@import "foundation/components/labels";
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
@@ -1708,4 +1709,12 @@ input[type="search"].custom-input-class {
 .result-panel {
   @include panel();
     background-color: white;
+    border: solid 2px $vs-light-grey;
+}
+
+.level-label-class {
+  @include label();
+ border: solid 2px $vs-light-grey;
+    font-size: 0.8em;
+    font-weight: 900;
 }
