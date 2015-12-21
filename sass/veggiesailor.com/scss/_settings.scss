@@ -1718,3 +1718,53 @@ input[type="search"].custom-input-class {
     font-size: 0.8em;
     font-weight: 900;
 }
+
+.label.level0-color {
+    background-color: $level1-color !important;
+}gut 
+.level1-color {
+    background-color: $level2-color !important;
+}
+
+.level2-color {
+    background-color: $level3-color !important;
+}
+
+.level3-color {
+    background-color: $level3-color !important;
+}
+.level4-color {
+    background-color: $level4-color !important;
+}
+.level5-color {
+    background-color: $level5-color !important;
+}
+
+
+
+@mixin ghost-button($font, $font-size, $font-color, $border-size, $border-color, $padding, $transition-speed, $hover-color)
+ {
+ display:inline-block;
+ text-decoration:none;
+// text-transform:uppercase;
+ font-family: $font;
+ font-size: $font-size;
+ color:$font-color;
+ border:$border-size solid $border-color;
+ padding-left:$padding*2;
+ padding-right:$padding*2;
+ padding-top:$padding;
+ padding-bottom:$padding;
+ -webkit-transition: color $transition-speed, background $transition-speed;
+ transition: color $transition-speed, background $transition-speed;
+ &:hover
+ {
+ background:$border-color;
+ color:$hover-color;
+ }
+ }
+
+.ghostey {
+ @include ghost-button(“Trebuchet”, 9px, #000000, 1px, #000, 2px, 300ms, #ffffff );
+    background-color: white;
+ }
