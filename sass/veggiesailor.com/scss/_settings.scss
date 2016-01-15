@@ -148,7 +148,7 @@ $vs-breacrumb-bg-color: $vs-very-dark-grey;
 // $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
 $secondary-color: $vs-very-dark-grey;
-// $alert-color: #f04124;
+$alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
@@ -298,7 +298,7 @@ $h6-font-size: 1rem;
 
 
 // A general <small> styling
-// $small-font-size: 60%;
+$small-font-size: 80%;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
@@ -1356,7 +1356,7 @@ $inline-list-default-float-list-margin: rem-calc(12);
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-table-classes: $include-html-classes;
+$include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
 // $table-bg: $white;
@@ -1369,10 +1369,10 @@ $inline-list-default-float-list-margin: rem-calc(12);
 
 // These control the table head styles
 // $table-head-bg: $white-smoke;
-// $table-head-font-size: rem-calc(14);
+//$table-head-font-size: rem-calc(7);
 // $table-head-font-color: $jet;
 // $table-head-font-weight: $font-weight-bold;
-// $table-head-padding: rem-calc(8 10 10);
+//$table-head-padding: rem-calc(4 5 5);
 
 // These control the table foot styles
 // $table-foot-bg: $table-head-bg;
@@ -1384,14 +1384,14 @@ $inline-list-default-float-list-margin: rem-calc(12);
 // These control the caption
 // $table-caption-bg: transparent;
 // $table-caption-font-color: $table-head-font-color;
-// $table-caption-font-size: rem-calc(16);
+// $table-caption-font-size: rem-calc(4);
 // $table-caption-font-weight: bold;
 
 // These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
-// $table-row-font-size: rem-calc(14);
+// $table-row-padding: rem-calc(0 0 0 0);
+// $table-row-font-size: rem-calc(7);
 // $table-row-font-color: $jet;
-// $table-line-height: rem-calc(18);
+ $table-line-height: rem-calc(1);
 
 // These are for controlling the layout, display and margin of tables
 // $table-layout: auto;
@@ -1568,6 +1568,9 @@ $topbar-dropdown-label-bg: $black;
 //   }
 // }
 
+
+
+
 .has-form {
 
 }
@@ -1621,6 +1624,10 @@ $vs-margin-size : 20px;
 
 .green {
 	color: $vs-green;
+}
+
+.vs-alert {
+    color: $alert-color;
 }
 
 .vs-bold {
@@ -1768,3 +1775,21 @@ input[type="search"].custom-input-class {
  @include ghost-button(“Trebuchet”, 9px, #000000, 1px, #000, 2px, 300ms, #ffffff );
     background-color: white;
  }
+
+//$include-html-table-classes: $include-html-classes;
+// These control the background color for the table and even rows
+$table-bg: transparent !important;
+$table-even-row-bg: transparent !important;
+//$table-row-font-color: $black;
+
+table {
+    background-color: transparent !important;
+    color: white;
+    
+}
+
+
+tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+    display: table-cell;
+    line-height: 0.25rem;
+}
