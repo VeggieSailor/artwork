@@ -1694,13 +1694,13 @@ input[type="search"].custom-input-class {
 .home-ghost-button-class { @include button;
 }
 .label.level0-color {
-    background-color: $level1-color !important;
+    background-color: $level0-color !important;
 }
 .label.level1-color {
-    background-color: $level2-color !important;
+    background-color: $level1-color !important;
 }
 .label.level2-color {
-    background-color: $level3-color !important;
+    background-color: $level2-color !important;
 }
 .label.level3-color {
     background-color: $level3-color !important;
